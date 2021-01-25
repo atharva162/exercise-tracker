@@ -19,7 +19,7 @@ const listener = app.listen(process.env.PORT || 3000, () => {
   console.log('Your app is listening on port ' + listener.address().port)
 })
 const uri= process.env.URI;
-mongoose.connect('mongodb+srv://atharva:shahrukh1@cluster0.a2ycq.mongodb.net/db1?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 let exerciseSchema = mongoose.Schema({
   description: String,
   duration: Number,
