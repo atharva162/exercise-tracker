@@ -8,7 +8,6 @@ const mongoose = require('mongoose');
 app.use(cors())
 app.use(express.urlencoded());
 
-// Parse JSON bodies (as sent by API clients)
 app.use(express.json());
 app.use(express.static('public'))
 app.get('/', (req, res) => {
